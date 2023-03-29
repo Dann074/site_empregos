@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Pessoas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="./logo.jpeg" alt="logo" class="logo">
+        </figure>
+        <nav>
+          <ul>
+            <li class="nav-button"><a href="./index.html">Home</a></li>
+            <li class="nav-button"><a href="#">Categorias</a></li>
+            <li class="nav-button"><a href="./login.html"><img src="./cadastro.png" alt="Login/Cadastro" id="login"></a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <div class="cadastro-container">
+    <div class="container">
+        <div class="cadastro">
+            <form id="cadastroPessoaForm">
+                <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome"><br>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br>
+                    </div>
+                    <div class="campo">
+                        <label for="idade">Senha:</label>
+                        <input type="password" id="senha" name="senha"><br>
+                    </div>
+                    <button type="submit" id="cadastroPessoaBtn">Cadastrar Pessoa</button>
+                </fiedlset>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    // Objeto que irá armazenar os dados das pessoas cadastradas
+    let pessoas = [];
+
+    // Função para cadastrar uma nova pessoa
+    function cadastrarPessoa(event) {
+      event.preventDefault();
+      let nome = document.getElementById("nome").value;
+      let email = document.getElementById("email").value;
+      let idade = document.getElementById("senha").value;
+
+      let novaPessoa = {
+        nome: nome,
+        email: email,
+        senha: senha
+      };
+
+      pessoas.push(novaPessoa);
+
+      alert(`Pessoa ${nome} cadastrada com sucesso!`);
+      console.log(pessoas);
+    }
+
+    // Adiciona o listener ao botão de cadastro
+    let cadastroPessoaBtn = document.getElementById("cadastroPessoaBtn");
+    cadastroPessoaBtn.addEventListener("click", cadastrarPessoa);
+  </script>
+</body>
+</html>
