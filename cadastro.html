@@ -19,7 +19,7 @@
       </header>
 
   <div class="cadastro-container">
-    <div class="container">
+    <div class="container-2">
         <div class="cadastro">
             <form id="cadastroPessoaForm">
                 <fieldset class="grupo">
@@ -36,38 +36,14 @@
                         <input type="password" id="senha" name="senha"><br>
                     </div>
                     <button type="submit" id="cadastroPessoaBtn">Cadastrar Pessoa</button>
+                    <p class="cadastrarLogin">Já possui cadastro?</p>
+                    <p><button target="blank" id="loginB"><a href="./cadastro.html" target="_blank">Fazer Login<img class="external" src="./external.png"></a></button></p>
                 </fiedlset>
               </form>
           </div>
       </div>
   </div>
 
-  <script>
-    // Objeto que irá armazenar os dados das pessoas cadastradas
-    let pessoas = [];
-
-    // Função para cadastrar uma nova pessoa
-    function cadastrarPessoa(event) {
-      event.preventDefault();
-      let nome = document.getElementById("nome").value;
-      let email = document.getElementById("email").value;
-      let idade = document.getElementById("senha").value;
-
-      let novaPessoa = {
-        nome: nome,
-        email: email,
-        senha: senha
-      };
-
-      pessoas.push(novaPessoa);
-
-      alert(`Pessoa ${nome} cadastrada com sucesso!`);
-      console.log(pessoas);
-    }
-
-    // Adiciona o listener ao botão de cadastro
-    let cadastroPessoaBtn = document.getElementById("cadastroPessoaBtn");
-    cadastroPessoaBtn.addEventListener("click", cadastrarPessoa);
-  </script>
+  <script src="cadastro.js"></script>
 </body>
 </html>

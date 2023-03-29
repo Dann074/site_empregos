@@ -14,7 +14,7 @@
     vertical-align: baseline;
     box-sizing: border-box;
     font-weight: inherit;
-    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
     font-style: inherit;
     font-size: 100%;
     text-decoration: none;
@@ -87,18 +87,32 @@ a {
     color: white;
 }
 
-.cadastro-container {
+.cadastro-container, .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container {
+.container-1 {
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
     width: 25rem;
     height: 25rem;
+    background: var(--form-bg-color);
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+.container-2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 25rem;
+    height: 29rem;
     background: var(--form-bg-color);
     padding: 28px 32px;
     overflow: hidden;
@@ -120,6 +134,12 @@ a {
     margin: 10px;
 }
 
-#cadastroPessoaBtn {
+#cadastroPessoaBtn, #loginBtn, #cadastroPessoaB, #loginB {
     font-size: 1.25rem;
+}
+
+.cadastrarLogin{
+    padding: 10px;
+    font-size: 1.25rem;
+    color: #635d63;
 }

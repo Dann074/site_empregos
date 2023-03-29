@@ -2,56 +2,46 @@
 <html>
 <head>
   <title>Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <figure>
+        <img src="./logo.jpeg" alt="logo" class="logo">
+    </figure>
+    <nav>
+      <ul>
+        <li class="nav-button"><a href="./index.html">Home</a></li>
+        <li class="nav-button"><a href="#">Categorias</a></li>
+        <li class="nav-button"><a href="./login.html"><img src="./cadastro.png" alt="Login/Cadastro" id="login"></a></li>
+      </ul>
+    </nav>
+  </header>
   <h1>Login</h1>
-  
-  <form id="loginForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br>
+  <div class="login-container">
+    <div class="container-1">
+        <div class="cadastro">
+            <form id="cadastroPessoaForm">
+                <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br>
+                    </div>
+                    <div class="campo">
+                        <label for="idade">Senha:</label>
+                        <input type="password" id="senha" name="senha"><br>
+                    </div>
+                    <button type="submit" id="loginBtn">Entrar</button>
+                    <p class="cadastrarLogin">Não tem cadastro?</p>
+                    <p><button target="blank" id="cadastroPessoaB"><a href="./cadastro.html" target="_blank">Cadastrar<img class="external" src="./external.png"></a></button></p>
+                </fiedlset>
+              </form>
+          </div>
+      </div>
+  </div>
 
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha"><br>
+  <script src="login.js"></script>
+  <script src="cadastro.js"></script>
 
-    <button type="submit" id="loginBtn">Entrar</button>
-  </form>
-
-  <script>
-    // Objeto que irá armazenar os dados das pessoas cadastradas
-    let pessoas = [
-      {
-        nome: "Maria",
-        email: "maria@gmail.com",
-        idade: 25,
-        senha: "123456"
-      },
-      {
-        nome: "João",
-        email: "joao@gmail.com",
-        idade: 30,
-        senha: "654321"
-      }
-    ];
-
-    // Função para verificar se o email e a senha são válidos
-    function fazerLogin(event) {
-      event.preventDefault();
-      let email = document.getElementById("email").value;
-      let senha = document.getElementById("senha").value;
-
-      let pessoa = pessoas.find(p => p.email === email && p.senha === senha);
-
-      if (pessoa) {
-        alert(`Bem-vindo(a) ${pessoa.nome}!`);
-        console.log(pessoa);
-      } else {
-        alert("Email ou senha inválidos!");
-      }
-    }
-
-    // Adiciona o listener ao botão de login
-    let loginBtn = document.getElementById("loginBtn");
-    loginBtn.addEventListener("click", fazerLogin);
-  </script>
 </body>
 </html>
